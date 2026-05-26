@@ -55,44 +55,44 @@ public class exercise {
 }*/
 	
 	
-	/*public static boolean isPrimeNumber(int number)
-	{
-		if(number <=1) {
-			return false;};
-		for ( int i = 2 ; i < number;i++) {
-		if (number % i == 0) 
-		{ 
-			return false;
-		}
-		}
-		return true;
-	};
-	public static void main(String[] args) {
-		Scanner number = new Scanner(System.in);
-		System.out.println("Enter number");
-		int n = number.nextInt();
-		if(isPrimeNumber(n)) {
-			System.out.println("true");
-		}
-		else {
-			System.out.println("false");
-		}
-	}
-}
-*/
+//public static boolean isPrimeNumber(int number)
+//	{
+//		if(number <=1) {
+//			return false;};
+//		for ( int i = 2 ; i < number;i++) {
+//		if (number % i == 0) 
+//		{ 
+//			return false;
+//		}
+//		}
+//		return true;
+//	};
+//	public static void main(String[] args) {
+//		Scanner number = Scanner(System.in);
+//		System.out.println("Enter number");
+//		int n = number.nextInt();
+//		if(isPrimeNumber(n)) {
+//			System.out.println("true");
+//		}
+//		else {
+//			System.out.println("false");
+//		}
+//	}
+//}
 
 
-	public static int singleNumber(int[]nums) {
-		int n = nums.length;
-		for(int i = 0; i < n -1; i +=2) {
-			if (nums[1]!=nums[i+1]) {
-				return nums[i];
+	    public static int singleNumber(int[] nums) {
+			Arrays.sort(nums);
+			for(int i = 1; i < nums.length; i +=2) {
+				if (nums[i-1]!=nums[i]) {
+					return nums[i-1];
+				}
 			}
-		}
-		return nums[n-1];
-	}
-	 public static void main(String[] args) {
-	        int[] a = {1, 1, 2, 2, 3, 4, 4};
-	        System.out.println(singleNumber(a));
-	    }
-	}
+			return nums[nums.length-1];
+		} 
+		 public static void main(String[] args) {
+		        int[] a = {1, 1, 2, 2, 3, 4, 4};
+	            int d = singleNumber(a);
+		        System.out.println(d);
+		    }
+	} 

@@ -1,19 +1,19 @@
 package be10;
 public class Homework3 {
 	public static int binaryGap(int n) {
-		    n >>= Integer.numberOfTrailingZeros(n); //remove trailing zeros
+		    n >>= Integer.numberOfTrailingZeros(n); 
 		    if (n == 1) 
-		    	return 0;                   //n is a power of two
+		    	return 0;                   
 
 		    int gap = 0;
 		    int maxGap = 0;
 		    while (n > 0) {
-		        if ((n & 1) == 1) {                 //found set bit
+		        if ((n & 1) == 1) {                 
 		            maxGap = Math.max(maxGap, gap);
-		            gap = 0;                        //reset gap
+		            gap = 0;                        
 		        } else
-		            gap++;                          //increase gap
-		        n >>= 1;                            //advance to next bit
+		            gap++;                          
+		        n >>= 1;                            
 		    }
 		    return maxGap;
 		}

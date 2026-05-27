@@ -25,41 +25,4 @@ public class Homework3 {
 }
 */
 //	Sai
-	public int solution(int[] A) {
-	    long S = 0;
-
-	    for (int i = 1; i < A.length - 1; i++) {
-	        int prev    = A[i - 1];   //
-	        int current = A[i];
-	        int next    = A[i + 1];
-
-	        // Skip số trùng liên tiếp
-	        while (i < A.length - 1 && A[i] == A[i + 1]) {
-	            i++;
-	        }
-
-	        if (i != A.length - 1) {
-	            next = A[i + 1];
-	        }
-
-	        if (current > prev && current > next) {
-	            S += current;   // đỉnh, cộng
-	        } else if (current < prev && current < next) {
-	            S -= current;   // đáy trừ
-	        }
-	    }
-
-	    // Xử lý đầu, cuối
-	    if (A[0] < A[1])                         
-	    	S -= A[0]; // đáy đầu
-	    if (A[0] > A[1])                         
-	    	S += A[0]; // đỉnh đầu
-	    if (A[A.length-1] > A[A.length-2])       
-	    	S += A[A.length-1]; // đỉnh cuối
-	    if (A[A.length-1] < A[A.length-2])       
-	    	S -= A[A.length-1]; // đáy cuối
-
-	    return (int) (S);
-	}
-}
-	        
+	      

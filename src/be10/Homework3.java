@@ -43,13 +43,13 @@ public class Homework3 {
 	        }
 
 	        if (current > prev && current > next) {
-	            S += current;   // đỉnh → cộng
+	            S += current;   // đỉnh, cộng
 	        } else if (current < prev && current < next) {
-	            S -= current;   // đáy → trừ
+	            S -= current;   // đáy trừ
 	        }
 	    }
 
-	    // Xử lý phần tử đầu và cuối
+	    // Xử lý đầu, cuối
 	    if (A[0] < A[1])                         
 	    	S -= A[0]; // đáy đầu
 	    if (A[0] > A[1])                         
@@ -59,7 +59,7 @@ public class Homework3 {
 	    if (A[A.length-1] < A[A.length-2])       
 	    	S -= A[A.length-1]; // đáy cuối
 
-	    return (int) (S % MOD);
+	    return (int) (S);
 	}
 }
 	        

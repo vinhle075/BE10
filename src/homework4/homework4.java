@@ -1,4 +1,4 @@
-package be10;
+package homework4;
 import java.util.Arrays;
 public class homework4 {
 //	public static int solution(int[] A) {

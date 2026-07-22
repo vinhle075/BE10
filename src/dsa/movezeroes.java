@@ -1,4 +1,4 @@
-package homework5;
+package dsa;
 
 public class movezeroes {
 	    public static int moveZeroes(int[] nums) {

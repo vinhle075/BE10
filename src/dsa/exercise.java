@@ -1,8 +1,7 @@
-package Homework2;
+package dsa;
 import java.util.Arrays;
-import java.util.Scanner;
 public class exercise {
-		/*public static void main(String[] args) {
+/*public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter size of array");
 			int size = sc.nextInt();
@@ -28,57 +27,32 @@ public class exercise {
 			System.out.println("Minimum Number="+min);
 			System.out.println("Avg="+avg);
 };}*/
-	
-/*public static boolean isPalindrome(int[]num) {
-		int i = 0;
-		int j = num.length-1;
-		while (i<j) {
-			if (num[i] !=num[j]){
-				return false;
-				}
-		i++;
-		j--;
-		}
-	return true;
-}
-	public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter array");
-	int size = sc.nextInt();
-	int[]a =new int [size];
-	System.out.println("Enter elements");
-	for (int i = 0; i <size; i++) {
-	a[i] = sc.nextInt();
+public static void main1(String[] args ) {
+    int[] nums = {3,4,5};
+    if (nums.length==0) {
+	return; //END //TERMINATE
+    }
+	int maxVal = nums[0];
+	int minVal= nums[0];
+	int total = 0;
+	//for each loop each item in array
+	for (int num:nums) {
+	    if ( num>maxVal)
+	    {
+		maxVal= num;
+	    }
+	    if( num<minVal) 
+	    {
+		minVal=num;
+	    }
+	    total += num;
 	}
-    System.out.println(isPalindrome(a));
+    double avg = (double)total/nums.length;
+    System.out.println("Max:" + maxVal );
+    System.out.println("Min:" + minVal);
+    System.out.printf("Average: %.2f\n", avg);
 }
-}*/
-	
-	
-//public static boolean isPrimeNumber(int number)
-//	{
-//		if(number <=1) {
-//			return false;};
-//		for ( int i = 2 ; i < number;i++) {
-//		if (number % i == 0) 
-//		{ 
-//			return false;
-//		}
-//		}
-//		return true;
-//	};
-//	public static void main(String[] args) {
-//		Scanner number = Scanner(System.in);
-//		System.out.println("Enter number");
-//		int n = number.nextInt();
-//		if(isPrimeNumber(n)) {
-//			System.out.println("true");
-//		}
-//		else {
-//			System.out.println("false");
-//		}
-//	}
-//}
+
 
 public static int singleNumber(int[] nums) {
 			Arrays.sort(nums);

@@ -1,4 +1,4 @@
-package homework4;
+package dsa;
 
 public class evennumber {
     public static int solution(int[] nums) {

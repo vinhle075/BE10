@@ -1,4 +1,4 @@
-package homework5;
+package dsa;
 public class removedupinsortedarray {
 	 public static int removeDuplicates(int[] nums) {
 	        int r=1;

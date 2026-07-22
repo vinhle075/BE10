@@ -1,5 +1,4 @@
-package homework4;
-import java.util.Arrays;
+package dsa;
 public class Prefixnumber {
 	public static int solution(int[] A) {
 	    int size = A.length;

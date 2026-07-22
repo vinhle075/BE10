@@ -3,6 +3,7 @@ package dsa;
 public class smsMessages {
 public static int solution(String S, int K) {
     String[] words = S.split(" "); // tach cau bang" ", nhet vo array String
+    // kiem tra w.length co fit condition K khong
     for (String w: words) {
 	    if(w.length()>K) {
 		return -1;
@@ -10,6 +11,11 @@ public static int solution(String S, int K) {
     }
     int count = 0;
     int currentLen =0;
+    // kiem tra cac dieu kien dem
+    // neu curLen = khong => init curLen = w.length
+    // else curLen+space+w.length <=K
+    // else current
+    
     for (int i = 0; i < words.length; i++) {
 	String w = words[i];
 	if (currentLen == 0) {
